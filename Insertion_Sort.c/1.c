@@ -1,8 +1,7 @@
-
+// Insertion sort - thuật toán sắp xếp chèn
 #include <stdio.h>
 #include <math.h>
 
-/* Hàm sắp xếp sử dụng thuật toán sắp xếp chèn */
 void insertionSort(int arr[], int n)
 {
     int i, key, j;
@@ -27,7 +26,7 @@ void printArray(int arr[], int n)
 {
     int i;
     for (i = 0; i < n; i++)
-        printf("%d ", arr[i]);
+        printf("%d\t", arr[i]);
     printf("\n");
 }
 
@@ -42,3 +41,5 @@ int main()
 
     return 0;
 }
+
+

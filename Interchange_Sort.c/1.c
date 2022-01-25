@@ -1,5 +1,5 @@
 
-// Interchange sort
+// Interchange sort : sắp xếp đổi chỗ trực tiếp trong C/C++
 
 /*
     Ý tưởng:
@@ -18,18 +18,31 @@
                 * i++
 */
 
-void interchangeSort(int a[], int size)
+#include<stdio.h>
+// 3 , 5, 7, 3, 8, 9
+// 0   1  2  3  4  5
+void interchangeSort(int a[], int n)
 {
-    for (int i = 0; i < arr.length - 1; i++)
+    for (int i = 0; i < n - 1; i++)
     {
-        for (int j = i + 1; j < arr.length; j++)
+        for (int j = i + 1; j < n; j++)
         {
-            if (arr[i] > arr[j])
+            if (a[i] > a[j])
             {
-                int temp = arr[i];
-                arr[i] = arr[j];
-                arr[j] = temp;
+                int temp = a[i];
+                a[i] = a[j];
+                a[j] = temp;
             }
         }
     }
+}
+
+int main() {
+    int a[5] = {1,5,7,3,9};
+    int n = sizeof(a)/ sizeof(a[0]);
+    interchangeSort(a, n);
+    for (int i = 0; i < n; i++) {
+        printf ("%d ", a[i]);
+    }
+    return 0;
 }

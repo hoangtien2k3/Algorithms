@@ -1,5 +1,5 @@
 
-// Interchange sort : sắp xếp đổi chỗ trực tiếp trong C/C++
+// Interchange sort : sắp xếp đổi chỗ trực tiếp 
 
 /*
     Ý tưởng:

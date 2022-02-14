@@ -7,9 +7,7 @@
         + Ở lần xử lý thứ i có vị trí đầu dãy là i
 
         + Lặp lại xử lý trên cho đến khi không còn cặp phần tử nào để xét
-
 */
-
 #include<stdio.h>
 
 void swap (int *xp, int *yp) {
@@ -19,7 +17,6 @@ void swap (int *xp, int *yp) {
 }
 // 64, 34, 25, 12, 22, 11, 90 -> 7
 // 0    1   2   3   4   5   6
-
 void bubbleSort(int arr[], int n)
 {
     for (int i = 0; i < n - 1; i++) { // i bắt đầu từ đầu dãy // i = 0
@@ -46,3 +43,5 @@ int main()
     printArray(arr, n);
     return 0;
 }
+
+

@@ -1,4 +1,6 @@
-// Insertion sort - thuật toán sắp xếp chèn
+
+// Insertion sort : sắp xếp chèn
+
 #include <stdio.h>
 #include <math.h>
 

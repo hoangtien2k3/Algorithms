@@ -1,10 +1,8 @@
 // Bubble sort in C
 
 #include <stdio.h>
-
 // -2,  45, 0,  11, -9 -> 5 element
 //  0   1   2   3    4
-
 void bubbleSort(int array[], int n)
 {
     for (int i = 0; i < n - 1; i++) // i bắt đầu từ đầu dãy // i = 0

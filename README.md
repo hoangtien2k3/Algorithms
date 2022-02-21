@@ -1,2 +1,2 @@
-# Algorithm
-Algorithm in C/C++
+Hi, my name is Tien
+Wellcome to Github's Tien

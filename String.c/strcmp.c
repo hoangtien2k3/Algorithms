@@ -13,6 +13,7 @@ void Strcmp (char s1[], char s2[]) {
         printf ("Hai chuoi khong bang nhau");
     }
 }
+
 int main() {
     char s1[20], s2[20];
     printf("Nhap vao chuoi s1: ");

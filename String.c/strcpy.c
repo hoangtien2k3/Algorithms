@@ -1,7 +1,7 @@
 // The strcpy(destination, source) function copies the source string in destination.
 /* syntax: strcpy(destination, source)
-    destination: nơi đến
-    source : nguồn
+        destination: nơi đến
+        source : nguồn
 
     // Strcpy : là hàm copy chuỗi s1 sang chuỗi s2
 */

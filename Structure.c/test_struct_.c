@@ -26,12 +26,12 @@ int main() {
     printf( "employee 1 salary : %f\n", e1.salary); 
 
     printf ("\n");
-    
+
     // printing second employee information  
     printf( "employee 2 id : %d\n", e2.id);     
     printf( "employee 2 name : %s\n", e2.name);    
     printf( "employee 2 salary : %f\n", e2.salary);
 
-
+    
     return 0;
 }

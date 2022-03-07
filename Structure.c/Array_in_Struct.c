@@ -15,7 +15,7 @@ int main() {
         printf ("\nEnter tuoi: ");
         scanf ("%d", &st[i].tuoi);
         printf ("\nEnter name: ");
-        scanf ("%s", &st[i].name);
+        scanf ("%s", st[i].name);
     }
     printf ("\nStudent information list: ");
     for (int i=0; i<5; i++) {

@@ -1,9 +1,9 @@
 
 /*
-    * Struct lồng nhau trong C
-    Có 2 cách để định nghĩa cấu trúc lồng nhau trong C:
-        1. Cấu trúc riêng biệt
-        2. Cấu trúc nhúng
+    * Struct lồng nhau(nest) trong C
+    + Có 2 cách để định nghĩa cấu trúc lồng nhau trong C:
+        1. Cấu trúc riêng biệt (By separate structure)
+        2. Cấu trúc nhúng (By Embedded structure)
 
 */
 
@@ -56,6 +56,8 @@ void main ()
     printf("Name: %s\nCity: %s\nPincode: %d\nPhone: %s", emp.name, emp.add.city, emp.add.pin, emp.add.phone);  
 } 
 
+
+///////////////////
 2. Cấu trúc nhúng:
 #include<stdio.h>
 

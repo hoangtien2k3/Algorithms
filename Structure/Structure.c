@@ -71,7 +71,7 @@ int main() {
 
 
 
-// example: information employee e1 and e2 
+/////////////////// example: information employee e1 and e2 
 #include<stdio.h>
 #include<string.h>
 

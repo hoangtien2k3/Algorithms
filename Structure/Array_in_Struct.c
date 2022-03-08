@@ -22,7 +22,7 @@ int main() {
         printf ("\nStudent %d: ", i);
         printf ("\nTuoi: %d, Name: %s",st[i].tuoi, st[i].name);
     }
-
+    
     return 0;
 }
 

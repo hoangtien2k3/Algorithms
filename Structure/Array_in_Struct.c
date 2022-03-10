@@ -2,6 +2,7 @@
 // Array_In_Struct : quản lý một cách đơn giản và dễ dàng
 
 #include<stdio.h>
+#include<string.h>
 // bài toán cần lưu thông tin 5 sinh viên:
 struct student 
 {

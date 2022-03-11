@@ -3,25 +3,25 @@
 
 #include<stdio.h>
 #include<string.h>
-// bài toán cần lưu thông tin 5 sinh viên:
+// bài toán cần lưu thông tin 3 sinh viên:
 struct student 
 {
     int tuoi;
     char name[10];
-} st[5];
+} st[3];
 
 int main() {
-    printf ("Input information 5 student: ");
-    for (int i=0; i<5; i++) {
+    printf ("Input information 3 student: ");
+    for (int i=0; i<3; i++) {
         printf ("\nEnter tuoi: ");
         scanf ("%d", &st[i].tuoi);
         printf ("\nEnter name: ");
         scanf ("%s", st[i].name);
     }
     printf ("\nStudent information list: ");
-    for (int i=0; i<5; i++) {
-        printf ("\nStudent %d: ", i);
-        printf ("\nTuoi: %d, Name: %s",st[i].tuoi, st[i].name);
+    for (int i=0; i<3; i++) {
+        printf ("\nStudent %d: \t", i);
+        printf ("Tuoi: %d, Name: %s",st[i].tuoi, st[i].name);
     }
     
     return 0;

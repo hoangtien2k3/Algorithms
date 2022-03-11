@@ -1,30 +1,28 @@
- 
-// Union trong C : là kiểu dữ liệu do người dùng tự định nghĩa, dùng để chứa các toán tử khác nhau
+/*
+    + Cũng giống như structure, union trong C là kiểu dữ liệu do người dùng định nghĩa 
+      được sử dụng để chứa các loại phần tử khác nhau.
 
+*/
 // Sự khác nhau giữa Union và Structure trong C/C++
 
-#include<stdio.h>
-#include<string.h>
-// # Ex: Structure
-struct employee {
-    int id;     // size 1 bytes
-    char name[10];  // size 2 byte
-    float salary;   // size 4 bytes
-} e1; // size of e1 = 7 bytes
+#include <stdio.h>
+#include <string.h>
+ 
+union Employee {
+    int id;
+    char name[50];
+} e1; // khai bao bien e1 cho Employee
 
 int main() {
-    // printf ("id = %d\nName = %d\nSalary = %d\n", sizeof(e1.id), sizeof(e1.name), sizeof(e1.salary));
-    printf ("%d", sizeof(e1.id));
-    printf ("\n%d", sizeof(e1.name));
-    printf ("\n%d", sizeof(e1.salary));
+    e1.id = 101;
+    strcpy(e1.name, "HOANG TIEN"); 
+    printf("employee e1 id: %d\n", e1.id);
+    printf("employee e1 name: %s\n", e1.name);
     return 0;
 }
 
-// # Ex: Union
-// union employee {
-//     int id;     // size 1 bytes
-//     char name[10];     // size 2 byte
-//     float salary;      // size 4 bytes
-// } e1; // size of e1 = 4 bytes
-
+/*
+    Khi chạy chương trình thì: Như bạn thấy, id lấy giá trị rác 
+    vì tên có kích thước bộ nhớ lớn. Vì vậy, chỉ tên sẽ có giá trị thực tế.
+*/
 

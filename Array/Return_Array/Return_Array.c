@@ -1,32 +1,14 @@
 
 /*
     RETURN AN ARRAY IN C: 
-    + using dynamically allocated array
-    + using static array
-    + using structure
+    + using dynamically allocated array : sử dụng mảng được cấp phát động trong C
+    + using static array : sử dụng mảng tỉnh 
+    + using structure : sử dụng cấu trúc struct
+
 */
-// #include<stdio.h>
-// #include<string.h>
 
-// int *getsArray (int *a) {
-//     for (int i=0; i<5; i++) {
-//         scanf ("%d", &a[i]);
-//     }
-//     return a;
-// }
-
-// int main() {
-//     int arr[5];
-//     getsArray(arr);
-//     for (int i=0; i<5; i++) {
-//         printf ("%d ", arr[i]);
-//     }
-//     return 0;
-// }
-
-//////////////////
-
-//  Return array using malloc() function.
+// Cách 1: using dynamicall allocated array
+// Return array using malloc() function.
 #include <stdio.h>  
 #include<malloc.h>  
 int *getarray()  
@@ -34,14 +16,14 @@ int *getarray()
     int size;  
     printf("Enter the size of the array : ");  
     scanf("%d",&size);  
-    int *p = (int*) malloc(size*sizeof(int));  
+    int *arr = (int*) malloc(size*sizeof(int));  
     // int *p = malloc (size);
     printf("\nEnter the elements in an array: ");  
     for(int i=0;i<size;i++)  
     {  
-        scanf("%d",&p[i]);  
+        scanf("%d",&arr[i]);  
     }  
-    return p;  
+    return arr;  
 }  
 int main()  
 {  
@@ -55,3 +37,62 @@ int main()
     }  
     return 0;  
 }  
+
+
+/////
+// cách 2: using static array: sử dụng mảng tỉnh (static)
+#include<stdio.h>
+int *getarray () {
+    static int arr[5];
+    printf ("Enter the element an array: ");
+    for (int i = 0; i < 5; i++) {
+        scanf  ("%d", &arr[i]);
+    }
+    return arr;
+}
+int main() {
+    int *ptr, length;
+    ptr = getarray();
+    printf ("\nElement that you have entered in array: ");
+    for (int i = 0; i < 5; i++) {
+        printf ("%d ", ptr[i]);
+    }
+}
+
+
+/////
+// Cách 3: using Structure: sử dụng cấu trúc
+/* 
+
+truct Operator fun()
+{
+    struct Operador items[3];
+     ...
+    return items[n];
+} 
+
+*/
+#include<stdio.h>
+#include<string.h>
+
+struct array {
+    int arr[5];
+};
+
+struct array getarray() {
+    struct array p1;
+    printf ("Enter the elements an array: ");
+    for (int i=0; i<5; i++) {
+        scanf ("%d", &p1.arr[i]);
+    }
+    return p1;
+}
+
+int main() {
+    struct array x = getarray();
+    printf ("Elements that you have entered in array: ");
+    for (int i = 0; i < 5; i++) {
+        printf ("%d ", x.arr[i]);
+    }
+    return 0;
+}

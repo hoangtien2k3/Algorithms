@@ -27,14 +27,14 @@ int *getarray()
 }  
 int main()  
 {  
-    int *ptr;  
-    ptr = getarray();  
+    int *ptr = getarray();  
     int length = sizeof(*ptr);  
     printf("Elements that you have entered are : ");  
     for(int i=0;i<length;i++)  
     {  
         printf("%d ", ptr[i]);  
     }  
+    free(ptr);
     return 0;  
 }  
 
@@ -63,7 +63,6 @@ int main() {
 /////
 // Cách 3: using Structure: sử dụng cấu trúc
 /* 
-
 truct Operator fun()
 {
     struct Operador items[3];

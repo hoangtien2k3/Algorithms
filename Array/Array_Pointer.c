@@ -11,7 +11,7 @@ void printarray(char *arr)
 int main()  
 {  
     char a[5]={'A','B','C','D','E'};
-    printarray(a);  // vì mảng ký tự bản thân nó là 1 địa chỉ rồi, nên chỉ cần truyền vào biến 'a'
+    printarray(a);  // (a) vì mảng ký tự bản thân nó là 1 địa chỉ rồi, nên chỉ cần truyền vào biến 'a'
     return 0;  
 }  
 
@@ -28,7 +28,7 @@ int ros9 (int *a) {
 int main() {
     int n = 5;
     printf ("n = %d", n);
-    ros9 (&n);
+    ros9 (&n); // &n vì n là số nguyên, nên cần truyền cho nó 1 địa chỉ
     printf ("\nn = %d", n);
     return 0;
 }

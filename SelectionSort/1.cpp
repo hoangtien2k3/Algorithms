@@ -5,18 +5,16 @@
 #include<math.h>
 
 void selectionSort (int a[], int n) {
-    int min;
-    for (int i=0; i < n - 1; i++) {
-        min = i;
-        for (int j = i + 1; j < n ; j++) {
-            if (a[j]  < a[min]) {
-                min = j; // ghi nhận vị trí phần tử nhỏ nhất
+    for (int i=0; i<n-1; i++) {
+        int min = i;
+        for (int j=i+1; j<n; j++) {
+            if (a[j] < a[min]) {
+                min = j;
             }
         }
-        if (min != i)
-        {
+        if (min != i) { //! biến min đã được thay đổi
             int temp = a[min];
-            a[min] = a[i];
+            a[min] = a[i]; //* a[i] đang là phần tử đầu tiên trong mảng
             a[i] = temp;
         }
     }

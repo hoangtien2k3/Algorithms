@@ -3,7 +3,6 @@
 
 // Ex: 12 => 2 3 5 7 11
 
-
 // nếu bạn muốn sàng các số nguyên tố không vượt quá n
 // phải tạo một mảng có kích thước là n + 1 phần tử
 
@@ -37,6 +36,7 @@ int main() {
             printf("%d ", i);
         }
     }
+
 
     return 0;
 }
@@ -76,5 +76,7 @@ int main() {
     in_nguyen_to(n);
     return 0;
 }
+
+
 
 

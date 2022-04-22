@@ -40,3 +40,41 @@ int main() {
 
     return 0;
 }
+
+
+
+
+
+
+
+//! Cách 2: không dùng sàng nguyên tố ( làm bằng cách thông thường )
+
+//! ////////////////////////
+// in ra các số nguyên tố từ 2 -> n (n nhập vào từ bàn phím)
+#include <stdio.h>
+#include <math.h>
+
+void in_nguyen_to(int n) {
+    for(int i=2; i<=n; i++) {
+        int count = 0;
+        for(int j=2; j<=sqrt(i); j++) {
+            if (i % j == 0) {
+                count++;
+                break;
+            }
+        }
+        if (count == 0 && i > 1) {
+            printf("%d\t", i);
+        }
+    }
+}
+
+int main() {
+    int n;
+    printf("Nhap vao n = ");
+    scanf("%d", &n);
+    in_nguyen_to(n);
+    return 0;
+}
+
+

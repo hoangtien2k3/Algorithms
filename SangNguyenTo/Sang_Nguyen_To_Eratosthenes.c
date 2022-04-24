@@ -9,7 +9,7 @@
 #include<stdio.h>
 #include<math.h>
 
-#define max 1000
+#define max 100001
 int arr[max];
 
 void Sang_Nguyen_To() {
@@ -36,8 +36,6 @@ int main() {
             printf("%d ", i);
         }
     }
-
-
     return 0;
 }
 
@@ -51,32 +49,34 @@ int main() {
 
 //! ////////////////////////
 // in ra các số nguyên tố từ 2 -> n (n nhập vào từ bàn phím)
-#include <stdio.h>
-#include <math.h>
+// #include <stdio.h>
+// #include <math.h>
 
-void in_nguyen_to(int n) {
-    for(int i=2; i<=n; i++) {
-        int count = 0;
-        for(int j=2; j<=sqrt(i); j++) {
-            if (i % j == 0) {
-                count++;
-                break;
-            }
-        }
-        if (count == 0 && i > 1) {
-            printf("%d\t", i);
-        }
-    }
-}
+// void in_nguyen_to(int n) {
+//     for(int i=2; i<=n; i++) {
+//         int count = 0;
+//         for(int j=2; j<=sqrt(i); j++) {
+//             if (i % j == 0) {
+//                 count++;
+//                 break;
+//             }
+//         }
+//         if (count == 0 && i > 1) {
+//             printf("%d\t", i);
+//         }
+//     }
+// }
 
-int main() {
-    int n;
-    printf("Nhap vao n = ");
-    scanf("%d", &n);
-    in_nguyen_to(n);
-    return 0;
-}
+// int main() {
+//     int n;
+//     printf("Nhap vao n = ");
+//     scanf("%d", &n);
+//     in_nguyen_to(n);
+
+//     return 0;
+// }
 
 
 
 
+    

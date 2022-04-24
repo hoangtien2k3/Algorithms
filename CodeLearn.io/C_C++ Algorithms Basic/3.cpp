@@ -15,7 +15,7 @@
 #define max 1000001
 int arr[max];
 
-int solution(int min) {
+void solution(int min) {
     for(int i=0; i<=min; i++) {
         arr[i] = 1; // gán tất cả các số trong mảng arr[i] = 1 // nghĩa là ta cứ cho tất cả các số trong mảng arr[i] là số nguyên tố
     }
@@ -35,7 +35,6 @@ int min(int a, int b){
 
 int greatestCommonPrimeDivisor(int a, int b) {
     solution(min(a, b)); // min(a, b) để tìm ra số nhỏ lớn giữa a và b
-    int d = 0;
     for(int i = min(a, b); i >=2; i--) {
         if (arr[i] && (!(a % i) && !(b % i))) {
             return i;
@@ -43,8 +42,6 @@ int greatestCommonPrimeDivisor(int a, int b) {
     }
     return -1; // -1 là ko tìm thấy
 }
-
-
 
 int main() {
     int a, b;

@@ -18,8 +18,9 @@ typedef struct arr_integer {
 } arr_integer;
 
 int maxFraction(arr_integer numerators, arr_integer denominators) {
+    arr_integer a;
     int res = 0;
-    for(int i = 1; i < numerators.size; i++) {
+    for(int i = 1; i < a.size; i++) {
         if (numerators.arr[res]*denominators.arr[i] < numerators.arr[i]*denominators.arr[res]){
             res = i;
         }
@@ -42,6 +43,7 @@ int main() {
         scanf("%d", array_2.arr[i]);
     }    
 
+    // int result = maxFraction(array_1, array_2);
     printf("%d", maxFraction(array_1, array_2));
 
     return 0;

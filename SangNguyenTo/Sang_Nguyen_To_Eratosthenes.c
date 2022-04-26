@@ -11,7 +11,7 @@
 
 #define max 100001
 int arr[max];
-
+ 
 void Sang_Nguyen_To() {
     for(int i=0; i<=max; i++) {
         arr[i] = 1; // gán tất cả giá trị của mảng = 1 ( coi như tất cả các giá trị đều là số nguyên tố)

@@ -39,6 +39,7 @@ int digitsProduct(int product)
         ans2 = ans2 * 10 + (ans % 10); // đảo ngược lại số ans trên
         ans /= 10;
     }
+    
     return (product == 1) ? ans2 : -1;
 }
 

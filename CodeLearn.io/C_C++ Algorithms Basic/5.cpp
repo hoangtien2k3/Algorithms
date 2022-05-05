@@ -37,11 +37,23 @@ int lastDigitDiffZero(int n) {
     return result % 10;
 }
 
+// int lastDigitDiffZero(int n)
+// { 
+//     int dig[] = {1, 1, 2, 6, 4, 2, 2, 4, 2, 8};
+//     int i = (int) n;
+
+//     if (n < 10)
+//         return dig[i]; 
+
+//     if (((n/10)%10)%2 == 0)
+//         return (6*lastDigitDiffZero(n/5)*dig[(int)n%10]) % 10;
+//     else
+//         return (4*lastDigitDiffZero(n/5)*dig[(int)n%10]) % 10;
+// }
+
 int main() {
     int n;
     std::cin >> n;
-
     std::cout << lastDigitDiffZero(n);
-
     return 0;
 }

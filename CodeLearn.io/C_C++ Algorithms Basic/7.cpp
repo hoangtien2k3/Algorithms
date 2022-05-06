@@ -48,6 +48,7 @@ int pagesNumbering(int n)
     return number_of_digits;
 }
 
+
 int main() {
     int n;
     std::cout << "Enter the digit n: ";

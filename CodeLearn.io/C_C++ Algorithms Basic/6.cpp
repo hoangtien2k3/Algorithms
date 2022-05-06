@@ -27,9 +27,9 @@ int digitsProduct(int product)
     if (product == 1) return 1;
     if (product == 0) return 10;
     int ans = 0;
-    for (int i = 9; i >= 2; i--){
+    for (int i = 9; i >= 2; i--){ // tại sao lại duyệt từ 9->2 mà không phải là từ 2->9 nguyên nhân để lấy ra số có chữ số bé nhất( lấy ra số lớn xong đó đảo ngược lại)
         while(product % i == 0){
-            ans = ans * 10 + i;
+            ans = ans * 10 + i; // VD: product = 12 => ans = 60 phải luộn ngược lại thành 26
             product /= i;
         }
     }

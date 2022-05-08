@@ -9,7 +9,7 @@
 #include<stdio.h>
 #include<math.h>
 
-#define max 100001
+#define max 10000001
 int arr[max];
  
 void Sang_Nguyen_To() {

@@ -56,6 +56,5 @@ void bfs(int u) {
 int main() {    
     input();
     bfs(1);
-
     return 0;
 }

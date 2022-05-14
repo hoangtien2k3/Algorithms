@@ -11,9 +11,9 @@
 
 #define max 10000001
 int arr[max];
- 
+
 void Sang_Nguyen_To() {
-    for(int i=0; i<=max; i++) {
+    for(int i=0; i<=max; i++) { //
         arr[i] = 1; // gán tất cả giá trị của mảng = 1 ( coi như tất cả các giá trị đều là số nguyên tố)
     }
     arr[0] = arr[1] = 0; // loại bỏ số 0 và số 1

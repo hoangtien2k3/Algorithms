@@ -1,6 +1,14 @@
 
 // BinarySearch: thuật toán tìm kiếm nhị phân
-// bắt buộc phải cần mảng sắp xếp tăng dần thì mới tìm kiếm được bằng BinarySearch
+/*
+    bắt buộc phải cần mảng sắp xếp tăng dần thì mới tìm kiếm được bằng BinarySearch
+
+    6 
+    5
+    1 2 3 4 5 
+    
+    solution() => true 
+*/ 
 
 
 #include<iostream>

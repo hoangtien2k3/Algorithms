@@ -41,7 +41,7 @@ string formatString(string input)
 
     // xóa khoảng trắng ở cuối chuỗi
 	while (input[input.length()-1] == ' ')
-        input.erase(input.length()-1, 1);
+        input.erase(input.length() - 1, 1); 
     return input;
 }
 

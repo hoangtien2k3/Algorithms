@@ -37,7 +37,7 @@ using namespace std;
 
 string xoa_Ky_Tu_Khong_Hop_Le(string s) {
     string check = "0123456789QWERTYUIOPASDFGHJKLZXCVBNMqwertyuiopasdfghjklzxcvbnm,? ";
-    for (char ch : s) {
+    for (auto ch : s) {
         if (check.find(ch) == -1) 
             s[s.find(ch)] = ' ';
     }
@@ -45,7 +45,7 @@ string xoa_Ky_Tu_Khong_Hop_Le(string s) {
 }
 
 string chuyen(string s) {
-    while (s.find('?') != -1) s[s.find('?')] = ' ';
+    while (s.find("?") != -1) s[s.find("?")] = ' ';
     while (s.find(",,") != -1) s.erase(s.find(",,"), 1);   
     while (s.find(" ,") != -1) s.erase(s.find(" ,"), 1);
     return s;

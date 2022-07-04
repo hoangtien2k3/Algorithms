@@ -31,3 +31,60 @@ Xâu kí tự chứa ít nhất 1 kí tự chữ cái (a-zA-Z)
 Xâu kí tự được chuẩn hóa theo các luật trên.
 
 */
+
+#include<bits/stdc++.h>
+using namespace std;
+
+string xoa_Ky_Tu_Khong_Hop_Le(string s) {
+    string check = "0123456789QWERTYUIOPASDFGHJKLZXCVBNMqwertyuiopasdfghjklzxcvbnm,? ";
+    for (char ch : s) {
+        if (check.find(ch) == -1) 
+            s[s.find(ch)] = ' ';
+    }
+    return s;
+}
+
+string chuyen(string s) {
+    while (s.find('?') != -1) s[s.find('?')] = ' ';
+    while (s.find(",,") != -1) s.erase(s.find(",,"), 1);   
+    while (s.find(" ,") != -1) s.erase(s.find(" ,"), 1);
+    return s;
+}
+
+string chuanHoa(string s) {
+    while (s[0] == ' ') s.erase(0, 1);
+    while (s[s.length() - 1] == ' ') s.erase(s.length() - 1, 1);
+    while (s.find("  ") != -1) s.erase(s.find("  "), 1);
+    return s;
+}
+
+string chuHoa(string s) {
+    if (s[0] >= 'a' && s[0] <= 'z') s[0] -= 32;
+    for (int i = 1; i < s.length(); i++) {
+        if (s[i] >= 'A' && s[i] <= 'Z')
+            s[i] += 32;
+        if (s[i] == ',' && i != s.length() - 1) {
+            if (s[i + 1] != ' ') 
+                s.insert(i + 1, " ");
+        }
+    }
+    s += '?';
+    while (s[s.length() - 2] == ' ' || s[s.length() - 2] == ',')
+        s.erase(s.length() - 2, 1);
+    return s;
+}
+
+string questionCorrection(string s) {   
+    s = xoa_Ky_Tu_Khong_Hop_Le(s);
+    s = chuyen(s);
+    s = chuanHoa(s);
+    s = chuHoa(s);
+    return s;
+}
+
+int main() {
+    string s;
+    getline(cin, s);
+    cout << questionCorrection(s);
+    return 0;
+}

@@ -33,7 +33,7 @@ bool checkEqualFrequency(vector<int> inputArray)
             k++;
         else
             break;
-    // inputArray.push_back(INT_MIN);
+    inputArray.push_back(INT_MIN);
     int d = 1;
     for (int i = k + 1; i < inputArray.size(); i++)
         if (inputArray[i] == inputArray[i - 1])

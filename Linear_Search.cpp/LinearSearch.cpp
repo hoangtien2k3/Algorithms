@@ -1,5 +1,5 @@
 
-// LinearSearch : thuật toán tìm kiếm tuyến tính: O(n)
+//! LinearSearch : thuật toán tìm kiếm tuyến tính: O(n)
 /*
     Ex: 
         4
@@ -15,13 +15,13 @@
 
 using namespace std;
 
-bool LinearSearch(int arr[], int n, int x) { // O(n)
+int LinearSearch(int arr[], int n, int x) { // O(n)
     for(int i=0; i<n; i++) {
         if (arr[i] == x) {
-            return true;
+            return i;
         }
     }
-    return false;
+    return -1;
 }
 
 int main() {
@@ -32,7 +32,11 @@ int main() {
     }
     int x; cin >> x;
 
-    cout << LinearSearch(arr, n, x) << endl;
+    int k = LinearSearch(arr, n, x);
+    if (k == -1)
+        cout << "Khong tim thay gia tri " << x << " trong mang!" << endl;
+    else
+        cout << "Tim thay gia tri " << x << " o chi so " << k << endl;
 
     return 0;
 }

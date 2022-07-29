@@ -17,7 +17,7 @@
 
 using namespace std;
 
-// dùng hàm thông thương
+//! dùng hàm thông thương
 // bool BinarySearch(int arr[], int left, int right, int x) { // O(log N)
 //     while(left <= right) {
 //         int mid = (left + right) / 2; // mid = left + (left + right) / 2;

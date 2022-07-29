@@ -1,5 +1,5 @@
 
-// LinearSearch : thuật toán tìm kiếm tuyến tính
+// LinearSearch : thuật toán tìm kiếm tuyến tính: O(n)
 /*
     Ex: 
         4

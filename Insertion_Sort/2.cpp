@@ -6,13 +6,13 @@
 // 4, 2, -8, 0, -5, 11, 20, 9 -> n = 8
 // 0  1   2  3   4   5   6  7
 
-void InsertionSort(int a[], int n)
+int * InsertionSort(int *a, int n)
 {
     int pos, x;
     for (int i = 1; i < n; i++)
     { //đoạn a[0] đã sắp
-        x = a[i]; // gán x = a[1] // x = 2
         pos = i; // pos = 1
+        x = a[i]; // gán x = a[1] // x = 2
         while (pos > 0 && x < a[pos - 1]) // i > 0 && a[i] < a[i - 1]
         {
             a[pos] = a[pos - 1]; // đổi chỗ
@@ -20,6 +20,7 @@ void InsertionSort(int a[], int n)
         }
         a[pos] = x;
     }
+    return a;
 }
 
 int main() {
